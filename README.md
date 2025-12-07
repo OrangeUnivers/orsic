@@ -1,7 +1,24 @@
-# Tauri + Vanilla
+# Orsic
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+Orsic is an open-source music player that is intended to be used on local audio files only. Its main focus is customizability and aesthetics.
 
-## Recommended IDE Setup
+> This project currently has no releases.
+<!-- [![Latest Release](https://img.shields.io/github/v/release/OrangeUnivers/orsic)](https://github.com/OrangeUnivers/Orsic/releases/latest) -->
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+
+## Features
+These are the features this app has/will have.
+
+- [ ] Basic playback
+- [ ] Saving music
+- [ ] Basic music information (Images, description, etc...)
+- [ ] System media integration
+- [ ] Album making
+- [ ] Making playlists
+- [ ] **Dynamic Track** support
+- [ ] iOS Gestures
+- [ ] UI Customization
+
+
+## License
+This project is licensed under the [MIT License](LICENSE).
