@@ -2,14 +2,14 @@
 
 Orsic is an open-source music player that is intended to be used on local audio files only. Its main focus is customizability and aesthetics.
 
-> This project currently has no releases.
-<!-- [![Latest Release](https://img.shields.io/github/v/release/OrangeUnivers/orsic)](https://github.com/OrangeUnivers/Orsic/releases/latest) -->
+<!-- [![Latest Release](https://img.shields.io/github/v/release/orangeunivers/orsic?label=Latest%20Release)](https://github.com/OrangeUnivers/Orsic/releases/latest) -->
+[![Latest Release](https://img.shields.io/github/v/release/orangeunivers/orsic?include_prereleases&label=Latest%20Pre-Release)](https://github.com/OrangeUnivers/Orsic/releases/latest)
 
 
 ## Features
 These are the features this app has/will have.
 
-- [ ] Basic playback
+- [x] Basic playback
 - [ ] Saving music
 - [ ] Basic music information (Images, description, etc...)
 - [ ] System media integration
