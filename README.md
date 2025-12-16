@@ -15,7 +15,7 @@ These are the features this app has/will have.
 - [ ] System media integration
 - [ ] Album making
 - [ ] Making playlists
-- [ ] **Dynamic Track** support
+- [ ] **DynamicTrack** support
 - [ ] iOS Gestures
 - [ ] UI Customization
 

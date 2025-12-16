@@ -22,7 +22,7 @@ fn stop_audio(tx: tauri::State<Mutex<std::sync::mpsc::Sender<AudioCommand>>>) {
     tx.lock().unwrap().send(AudioCommand::Stop).unwrap();
 }
 
-pub fn run() {
+pub fn app() {
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_opener::init())
@@ -35,4 +35,10 @@ pub fn run() {
         ])
         .run(tauri::generate_context!())
         .expect("error running app");
+}
+
+#[cfg(mobile)]
+#[tauri::mobile_entry_point]
+fn main() {
+    app();
 }
