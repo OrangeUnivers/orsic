@@ -36,16 +36,20 @@ pub fn get_metadata(path: String) -> Result<TrackMetadata, String> {
     let mut album = None;
     let mut duration_ms = None;
 
+    let title_keys = ["title", "TIT2", "©nam"];
+    let artist_keys = ["artist", "TPE1", "©ART"];
+    let album_keys = ["album", "TALB", "©alb"];
+
     if let Some(metadata) = format.metadata().current() {
         for tag in metadata.tags() {
             let key = tag.key.to_lowercase();
             let value = tag.value.to_string();
 
-            if key.contains("title") {
+            if title_keys.iter().any(|k| k.eq_ignore_ascii_case(&key)) {
                 title = Some(value);
-            } else if key.contains("artist") {
+            } else if artist_keys.iter().any(|k| k.eq_ignore_ascii_case(&key)) {
                 artist = Some(value);
-            } else if key.contains("album") {
+            } else if album_keys.iter().any(|k| k.eq_ignore_ascii_case(&key)) {
                 album = Some(value);
             }
         }

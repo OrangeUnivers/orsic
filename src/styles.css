@@ -1,11 +1,172 @@
 :root {
-    color: #0f0f0f;
-    background-color: #f6f6f6;
+    font-size: calc(var(--s-text) * 1rem);
+}
+body {
+    color: var(--c-fg);
+    background-color: var(--c-bg-0);
     font-family: -apple-system, BlinkMacSystemFont, Montserrat;
 }
-@media (prefers-color-scheme: dark) {
-    :root {
-        color: #f6f6f6;
-        background-color: #2f2f2f;
-    }
+*[data-unselectable] {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#open-track {
+    background-color: var(--c-bg-1);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color var(--t-delay), background-color var(--t-delay);
+}
+:root:not([data-mobile]) #open-track:hover {
+    color: var(--c-fg-strong);
+    background-color: var(--c-bg-1-strong);
+}
+#open-track>i {
+    font-size: 2.2rem;
+}
+:root[data-shadows="low"] #open-track {
+    box-shadow:
+        0 0.16rem 0.32rem #00000023;
+}
+:root[data-shadows="normal"] #open-track {
+    box-shadow:
+        0 0.16rem 0.32rem #00000043,
+        0 0.4rem 0.8rem #00000036;
+}
+:root[data-shadows="high"] #open-track {
+    box-shadow:
+        inset -0.08rem -0.12rem 0.16rem -0.04rem #00000090,
+        inset -0.2rem -0.3rem 0.4rem -0.1rem #00000040,
+        inset 0.08rem 0.12rem 0.16rem -0.04rem #ffffff40,
+        inset 0.2rem 0.3rem 0.4rem -0.1rem #ffffff10,
+        0.08rem 0.16rem 0.32rem #00000060,
+        0.2rem 0.4rem 0.8rem #00000030;
+}
+#import-dialog-holder {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: backdrop-filter var(--t-delay);
+}
+#import-dialog-holder.open {
+    backdrop-filter: blur(0.2rem) brightness(80%);
+    pointer-events: all;
+}
+#import-dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background-color: var(--c-bg-1);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    opacity: 0;
+    transition: opacity var(--t-delay);
+    cursor: default;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+:root[data-shadows="low"] #import-dialog {
+    box-shadow:
+        0 0.16rem 0.32rem #00000023;
+}
+:root[data-shadows="normal"] #import-dialog {
+    box-shadow:
+        0 0.16rem 0.32rem #00000043,
+        0 0.4rem 0.8rem #00000036;
+}
+:root[data-shadows="high"] #import-dialog {
+    box-shadow:
+        inset -0.08rem -0.12rem 0.16rem -0.04rem #000000d0,
+        inset -0.2rem -0.3rem 0.4rem -0.1rem #00000040,
+        inset 0.08rem 0.12rem 0.16rem -0.04rem #ffffff40,
+        inset 0.2rem 0.3rem 0.4rem -0.1rem #ffffff20,
+        0.08rem 0.16rem 0.32rem #00000060,
+        0.2rem 0.4rem 0.8rem #00000030;
+}
+#import-dialog-holder.open>#import-dialog {
+    opacity: 1;
+}
+#import-dialog-checkbox {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    height: 1.6rem;
+    padding-left: 0.4rem;
+    font-size: 0.85rem;
+}
+#import-dialog-checkbox-button {
+    display: flex;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: .08rem solid var(--c-fg);
+    justify-content: center;
+    align-items: center;
+}
+#import-dialog-checkbox-button>i {
+    opacity: 0;
+    transition: opacity var(--t-delay-fast);
+}
+#import-dialog-checkbox-button[checked]>i {
+    opacity: 1;
+}
+#import-dialog-gallery,
+#import-dialog-once {
+    background-color: var(--c-bg-2);
+    padding-top: 0.4rem;
+    padding-bottom: 0.45rem;
+    padding-inline: 0.6rem;
+    width: fit-content;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: color var(--t-delay), background-color var(--t-delay);
+}
+:root:not([data-mobile]) #import-dialog-gallery:hover,
+:root:not([data-mobile]) #import-dialog-once:hover {
+    color: var(--c-fg-strong);
+    background-color: var(--c-bg-2-strong);
+}
+:root[data-shadows="low"] #import-dialog-gallery,
+:root[data-shadows="low"] #import-dialog-once {
+    box-shadow:
+        0 0.08rem 0.16rem #00000023,
+        0 0.2rem 0.4rem #00000016;
+}
+:root[data-shadows="normal"] #import-dialog-gallery,
+:root[data-shadows="normal"] #import-dialog-once {
+    box-shadow:
+        0 0.08rem 0.16rem #00000043,
+        0 0.2rem 0.4rem #00000036;
+}
+:root[data-shadows="high"] #import-dialog-gallery,
+:root[data-shadows="high"] #import-dialog-once {
+    box-shadow:
+        inset -0.06rem -0.09rem 0.12rem -0.03rem #00000090,
+        inset -0.15rem -0.225rem 0.3rem -0.075rem #00000040,
+        inset 0.06rem 0.09rem 0.12rem -0.03rem #ffffff40,
+        inset 0.15rem 0.225rem 0.3rem -0.075rem #ffffff10,
+        0.06rem 0.12rem 0.24rem #00000060,
+        0.15rem 0.3rem 0.6rem #00000030;
+}
+#fullscreen-track {
+    display: none;
 }

@@ -1,0 +1,75 @@
+:root {
+    /* Scale */
+    --s-text: 1.5;
+
+    /* Color */
+    --c-accent-h: 25;
+    --c-accent-s: 60%;
+    --c-accent-s-muted: 30%;
+    --c-accent-s-strong: 65%;
+
+    /* Light Mode */
+    --c-light-fg-l: 5%;
+    --c-light-bg-0-l: 95%;
+    --c-light-bg-1-l: 85%;
+    --c-light-bg-2-l: 75%;
+    --c-light-muted-l: 0%;
+    --c-light-strong-l: 0%;
+
+    /* Dark Mode */
+    --c-dark-fg-l: 90%;
+    --c-dark-bg-0-l: 15%;
+    --c-dark-bg-1-l: 25%;
+    --c-dark-bg-2-l: 35%;
+    --c-dark-muted-l: 0%;
+    --c-dark-strong-l: 5%;
+
+    /* Transitions */
+    --t-delay: 0.3s;
+    --t-delay-fast: 0.1s;
+}
+:root[data-theme="auto"],
+:root[data-theme="light"] {
+    --c-fg: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-light-fg-l));
+    --c-fg-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-light-fg-l) + var(--c-light-muted-l)));
+    --c-fg-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-light-fg-l) + var(--c-light-strong-l)));
+    --c-bg-0: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-light-bg-0-l));
+    --c-bg-0-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-light-bg-0-l) + var(--c-light-muted-l)));
+    --c-bg-0-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-light-bg-0-l) + var(--c-light-strong-l)));
+    --c-bg-1: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-light-bg-1-l));
+    --c-bg-1-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-light-bg-1-l) + var(--c-light-muted-l)));
+    --c-bg-1-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-light-bg-1-l) + var(--c-light-strong-l)));
+    --c-bg-2: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-light-bg-2-l));
+    --c-bg-2-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-light-bg-2-l) + var(--c-light-muted-l)));
+    --c-bg-2-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-light-bg-2-l) + var(--c-light-strong-l)));
+}
+:root[data-theme="dark"] {
+    --c-fg: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-fg-l));
+    --c-fg-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-fg-l) + var(--c-dark-muted-l)));
+    --c-fg-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-fg-l) + var(--c-dark-strong-l)));
+    --c-bg-0: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-bg-0-l));
+    --c-bg-0-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-bg-0-l) + var(--c-dark-muted-l)));
+    --c-bg-0-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-bg-0-l) + var(--c-dark-strong-l)));
+    --c-bg-1: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-bg-1-l));
+    --c-bg-1-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-bg-1-l) + var(--c-dark-muted-l)));
+    --c-bg-1-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-bg-1-l) + var(--c-dark-strong-l)));
+    --c-bg-2: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-bg-2-l));
+    --c-bg-2-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-bg-2-l) + var(--c-dark-muted-l)));
+    --c-bg-2-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-bg-2-l) + var(--c-dark-strong-l)));
+}
+@media (prefers-color-scheme: dark) {
+    :root[data-theme="auto"] {
+        --c-fg: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-fg-l));
+        --c-fg-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-fg-l) + var(--c-dark-muted-l)));
+        --c-fg-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-fg-l) + var(--c-dark-strong-l)));
+        --c-bg-0: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-bg-0-l));
+        --c-bg-0-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-bg-0-l) + var(--c-dark-muted-l)));
+        --c-bg-0-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-bg-0-l) + var(--c-dark-strong-l)));
+        --c-bg-1: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-bg-1-l));
+        --c-bg-1-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-bg-1-l) + var(--c-dark-muted-l)));
+        --c-bg-1-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-bg-1-l) + var(--c-dark-strong-l)));
+        --c-bg-2: hsl(var(--c-accent-h), var(--c-accent-s), var(--c-dark-bg-2-l));
+        --c-bg-2-muted: hsl(var(--c-accent-h), var(--c-accent-s-muted), calc(var(--c-dark-bg-2-l) + var(--c-dark-muted-l)));
+        --c-bg-2-strong: hsl(var(--c-accent-h), var(--c-accent-s-strong), calc(var(--c-dark-bg-2-l) + var(--c-dark-strong-l)));
+    }
+}

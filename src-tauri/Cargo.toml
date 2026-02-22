@@ -27,3 +27,4 @@ rodio = "0.17"
 symphonia = { version = "0.5", features = ["mp3", "aac", "flac", "vorbis", "wav", "isomp4"] }
 base64 = "0.21"
 tauri-plugin-os = "2"
+tauri-plugin-fs = "2"

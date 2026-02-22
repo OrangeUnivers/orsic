@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="auto" data-shadows="normal">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
+    <script src="getMobile.js"></script>
     <title>Orsic</title>
 </head>
 <body>
-    <h1>Orsic</h1>
+    Seems like your music gallery is empty!
+    Click below to play/add music!
+    <div id="open-track">
+        <i class="icon-plus"></i>
+    </div>
+    <div id="track-gallery">
+        div.
+    </div>
+    <div id="import-dialog-holder" class="open">
+        <div id="import-dialog">
+            What do you want to do?
+            <div id="import-dialog-checkbox">
+                <div id="import-dialog-checkbox-button"><i class="icon-x"></i></div> Do not ask again
+            </div>
+            <div id="import-dialog-gallery">Add to gallery</div>
+            <div id="import-dialog-once">Play without adding</div>
+        </div>
+    </div>
+    <div id="fullscreen-track">
+        <h2>Pigstep</h2>
+        <div>
+            <img src="" alt="">
+        </div>
+        <!-- <progress value="0" max="100"></progress> -->
+        <div></div>
+    </div>
+    <!-- <h1>Orsic</h1>
     Please press button to pick and play audio.
     <br>
     <button id="pick-button">Pick Audio</button>
     <button id="meta-button">Meta Audio</button>
     <br>
     <p id="file-path">Nothin</p>
-    <p id="file-path-truncated">Still Nothin</p>
-    <script src="main.js"></script>
+    <p id="file-path-truncated">Still Nothin</p> -->
+    <script src="main.js" type="module"></script>
 </body>
 </html>
